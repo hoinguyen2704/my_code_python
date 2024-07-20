@@ -1,5 +1,5 @@
 import time
-password = "hoinguyen"
+password = ""
 passw = ""
 while passw != password:
     passw = input("enter your password: ")
@@ -19,3 +19,4 @@ with open("text.txt", "r") as file:
 for x in line:
 	print(x, end = "")
 	time.sleep(0.001)
+ 
