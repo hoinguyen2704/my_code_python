@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
+
+from Astar import a_star_search
 from Image_Processing import load_image, convert_to_matrix
-from Astar import a_star_search, heuristic
 
 
 def onclick(event, location):
@@ -8,6 +9,7 @@ def onclick(event, location):
         location.append((int(event.ydata), int(event.xdata)))
         plt.plot(event.xdata, event.ydata, 'go' if len(location) == 1 else 'ro')
         plt.draw()
+
 
 def select_points(binary_matrix):
     #Chọn điểm bắt đầu, đích
@@ -24,6 +26,7 @@ def display_result(binary_matrix, path):
     if path:
         plt.plot(*zip(*[(y, x) for x, y in path]), color='blue', linewidth=2)
     plt.show()
+
 
 matrix = convert_to_matrix(load_image('D:/AI/map4.png'))
 points = select_points(matrix)

@@ -1,6 +1,8 @@
-import support_function as spf
 import time
 from queue import PriorityQueue
+
+import support_function as spf
+
 
 def AStart_Search(board, list_check_point):
     #
