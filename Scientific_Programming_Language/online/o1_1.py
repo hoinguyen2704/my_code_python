@@ -1,0 +1,12 @@
+n = int(input(f'len = '))
+print(f'len = {n}')
+a = tuple()
+for i in range(n):
+    a += ( input(f'a[{i}]: '), )
+print(a)
+print(type(a))
+print(type(a[0]))
+b= tuple(map(int, a))
+print(b)
+avg_b = sum(b)/ len(b)
+print(avg_b)
